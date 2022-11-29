@@ -1,3 +1,9 @@
-import api.kubernetes.deployment
+from api.kubernetes.deployment.handler import KubeClientHandler
+import docker
+import urllib3
+from os import path
+import yaml
 
-print("Hello World!")
+clienthandler = KubeClientHandler()
+# clienthandler.listDeployments()
+clienthandler.createNginxDeployment()
